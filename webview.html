@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <style>
+    .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: black;
+      padding: 50px 100px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    </style>
+    </head>
+<head>
+    <meta charset="UTF-8">
+    <title id="title">Web</title>
+    <script type="text/javascript">
+			
+			function goHome(){
+                system.go("/Hello");
+            }
+			
+			function goPage(){
+				system.go("/PageTwo");
+            }
+            function goSite(){
+                system.go("https://www.huawei.com/en/");
+            }
+        </script>
+</head>
+<body >
+</div>
+<div style="margin-top: 20px;margin-left: 20px;">
+    <div id="javascript"></div>
+
+	<input type="button" id="button1" class="button" value="Home Page" onclick="goHome()"/>
+
+</div>
+<div style="margin-top: 20px;margin-left: 20px;">
+    <div id="javascript"></div>
+
+	<input type="button" id="button2" class="button" value="Page Two" onclick="goPage()"/>
+
+</div>
+<div style="margin-top: 20px;margin-left: 20px;">
+
+    <div id="javascript"></div>
+
+    <input type="button" id="button3" class="button" value="Go Huawei" onclick="goSite()"/>
+
+</div>
+</body>
+</html>

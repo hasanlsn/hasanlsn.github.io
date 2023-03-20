@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function sendMessage() {
+        var msg = document.getElementById("messageInput").value;
+        system.postMessage(msg);
+      }
+	
+	  system.onmessage = function (data) {
+        document.getElementById("received-message").innerHTML = data;
+      };
+    </script>
+  </head>
+  <body>
+    <a href="https://huawei.com">Go To https://huawei.com</a><br /><br />
+    <input type="text" id="messageInput" placeholder="Please enter message" style="padding:8px;font-size:16px;"><br /><br />
+    <input
+      type="button"
+      id="button1"
+      class="button"
+	style="
+    background-color: red;
+    border: none;
+    padding: 8px;
+	font-size: 16px;
+    border-radius: 6px;
+    color: black;
+    text-align: center;"
+      value="Post Message To Quick App"
+      onclick="sendMessage()"
+    /><br /><br />
+    Received Message: <label id="received-message"> </label>
+  </body>
+</html>
