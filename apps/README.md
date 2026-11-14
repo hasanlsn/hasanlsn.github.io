@@ -1,0 +1,20 @@
+# App pages
+
+Her uygulama kendi klasöründe tutulur:
+
+```
+apps/
+  <app-slug>/
+    index.html      Marketing / landing page
+    support.html    Support URL
+    privacy.html    Privacy Policy URL
+    assets/         Icon, screenshots, page.css
+```
+
+Mevcut uygulamalar:
+
+- `ritim/` — https://hsnlsn.com/portfolio/apps/ritim/
+
+Yeni bir uygulama eklerken aynı üç sayfayı ve `assets/page.css` bağlantısını
+kullanabilirsiniz. Sayfaların birbirine göreli bağlantıları `index.html`,
+`support.html` ve `privacy.html` şeklindedir.
