@@ -13,7 +13,8 @@ apps/
 
 Mevcut uygulamalar:
 
-- `ritim/` — https://hsnlsn.com/portfolio/apps/ritim/
+- `ritim/` — https://hasanlsn.github.io/apps/ritim/
+- `qleair/` — https://hasanlsn.github.io/apps/qleair/
 
 Yeni bir uygulama eklerken aynı üç sayfayı ve `assets/page.css` bağlantısını
 kullanabilirsiniz. Sayfaların birbirine göreli bağlantıları `index.html`,
