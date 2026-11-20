@@ -166,6 +166,3 @@ appnexus.com, 11826, RESELLER, f5ab79cb980f11d1
 appnexus.com, 14230, RESELLER, f5ab79cb980f11d1
 appnexus.com, 17779, RESELLER
 appnexus.com, 17973, RESELLER, f5ab79cb980f11d1
-
-# ironSource Ads (direct)
-ironsrc.com, 703071, DIRECT
