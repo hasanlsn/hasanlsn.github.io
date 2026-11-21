@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kimlik Doğrulayıcı — Destek / Support</title>
-  <meta name="description" content="Kimlik Doğrulayıcı uygulaması için destek, sık sorulan sorular ve iletişim bilgileri.">
+  <title>AuthHub Kimlik Doğrulayıcı — Destek / Support</title>
+  <meta name="description" content="AuthHub Kimlik Doğrulayıcı için destek, sık sorulan sorular ve iletişim bilgileri.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,16 +16,16 @@
 
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="index.html" aria-label="Kimlik Doğrulayıcı ana sayfa">
+      <a class="brand" href="index.html" aria-label="AuthHub ana sayfa">
         <img src="assets/icon.png" alt="">
         <span>
-          <span class="brand-wordmark">Kimlik Doğrulayıcı</span>
-          <span class="brand-tagline" data-lang-panel="tr">İki adımlı doğrulama</span>
-          <span class="brand-tagline" data-lang-panel="en" hidden>Two-factor authentication</span>
+          <span class="brand-wordmark">AuthHub</span>
+          <span class="brand-tagline" data-lang-panel="tr">Kimlik Doğrulayıcı</span>
+          <span class="brand-tagline" data-lang-panel="en" hidden>Authenticator</span>
         </span>
       </a>
 
-      <nav class="header-nav" aria-label="Kimlik Doğrulayıcı">
+      <nav class="header-nav" aria-label="AuthHub">
         <a href="index.html" data-lang-panel="tr">Uygulama</a>
         <a href="index.html?lang=en" data-lang-panel="en" hidden>App</a>
         <a href="support.html" data-lang-panel="tr">Destek</a>
@@ -43,14 +43,14 @@
   <main id="main" class="wrap page-main">
     <div class="page-heading">
       <div data-lang-panel="tr">
-        <p class="eyebrow">Kimlik Doğrulayıcı · Destek</p>
+        <p class="eyebrow">AuthHub · Destek</p>
         <h1>Yardıma hazırız.</h1>
-        <p>Kod ekleme, biyometrik kilit, reklamlar veya veriler hakkında bir sorunuz mu var? Aşağıdaki yanıtlar çoğu durumu çözer; olmazsa yazabilirsiniz.</p>
+        <p>Kod ekleme, klasörler, yedekleme, widget’lar veya veriler hakkında bir sorunuz mu var? Aşağıdaki yanıtlar çoğu durumu çözer; olmazsa yazabilirsiniz.</p>
       </div>
       <div data-lang-panel="en" hidden>
-        <p class="eyebrow">Authenticator · Support</p>
+        <p class="eyebrow">AuthHub · Support</p>
         <h1>We are here to help.</h1>
-        <p>Do you have a question about adding codes, the biometric lock, ads or your data? The answers below cover most cases; if not, write to us.</p>
+        <p>Do you have a question about adding codes, folders, backup, widgets or your data? The answers below cover most cases; if not, write to us.</p>
       </div>
     </div>
 
@@ -70,12 +70,12 @@
         <h2>Sık sorulan sorular</h2>
         <div class="faq">
           <details>
-            <summary>Kimlik Doğrulayıcı nedir?</summary>
-            <p>İki adımlı doğrulama için TOTP ve HOTP kodları üreten bir iOS uygulamasıdır. Kodlar cihazında üretilir; hesap, giriş veya sunucu gerekmez. Jetonlar cihazın Anahtar Zinciri’nde, uygulama kayıtları cihazında saklanır.</p>
+            <summary>AuthHub nedir?</summary>
+            <p>AuthHub Kimlik Doğrulayıcı, iki adımlı doğrulama için TOTP ve HOTP kodları üreten bir iOS uygulamasıdır. Kodlar cihazında üretilir; hesap, giriş veya sunucu gerekmez. Jetonlar cihazın Anahtar Zinciri’nde, uygulama kayıtları cihazında saklanır.</p>
           </details>
           <details>
             <summary>Yeni kod nasıl eklerim?</summary>
-            <p>Sağ üstteki artı düğmesine dokun. Hizmetin verdiği QR kodu kamerayla tarayabilir veya gizli anahtarı elle girebilirsin. Hizmet adı ve kullanıcı bilgisi yalnızca görünen etiketlerdir; kod üretimini etkilemez.</p>
+            <p>Sağ üstteki artı düğmesine dokun. QR kodu kamerayla tarayabilir, gizli anahtarı elle girebilir veya fotoğraf ya da panodan toplu içe aktarabilirsin. Toplu içe aktarmada önce önizleme açılır; eklemek istemediğin kodları çıkarabilirsin. Hizmet adı ve kullanıcı bilgisi yalnızca görünen etiketlerdir; kod üretimini etkilemez.</p>
           </details>
           <details>
             <summary>TOTP ile HOTP arasındaki fark nedir?</summary>
@@ -99,11 +99,19 @@
           </details>
           <details>
             <summary>Yeni eklenen kod neden en üstte?</summary>
-            <p>Son eklenen kod her zaman en üstte görünür. Üst çubuktaki görünüm menüsünden liste, kompakt liste veya ızgara seçebilirsin.</p>
+            <p>Son eklenen kod her zaman en üstte görünür. Üst çubuktaki görünüm menüsünden liste, kompakt liste veya ızgara seçebilir; arama, sabitleme ve sıralama ile listeyi düzenleyebilirsin.</p>
           </details>
           <details>
-            <summary>Yedekleme veya başka cihaza aktarma var mı?</summary>
-            <p>Bu sürümde dışa/içe aktarma yoktur. Jetonlar cihazda kalır. Uygulamayı silersen yerel kayıtlar kaldırılır; kodları hizmetlerin güvenlik ayarlarından yeniden eklemen gerekir.</p>
+            <summary>Klasörler nasıl çalışır?</summary>
+            <p>Klasörler yalnızca gruplama içindir. Ayarlar → Klasörler’den renk seçerek klasör oluşturabilir, kodları klasörlere atayabilir ve üstteki klasör çipleriyle filtreleyebilirsin. Bir klasörü silmek kodları silmez; kodlar Tümü listesine döner.</p>
+          </details>
+          <details>
+            <summary>Widget’ları nasıl eklerim?</summary>
+            <p>Ana ekranına veya kilit ekranına dokunup Widget’lar bölümünden AuthHub’ı ekleyebilirsin. Widget’lar kodlarını gösterir; Ayarlar → Widget’ta Kodları Gizle açıksa yalnızca hizmet adları görünür.</p>
+          </details>
+          <details>
+            <summary>Yedekleme ve geri yükleme nasıl çalışır?</summary>
+            <p>Tek bir ana parolayla şifreli yedek oluşturabilir ve geri yükleyebilirsin. Ayarlar → Yedekleme bölümünde seçtiğin klasöre otomatik yedek alınır ve son 5 yedek saklanır. Ana parolayı değiştirirken mevcut parola sorulur. Geri yüklemede önce önizleme açılır; istemediğin kodları çıkarabilirsin. Yedeği başka bir cihazda açmak için aynı ana parolayı kullanman yeterli.</p>
           </details>
           <details>
             <summary>Reklamlar zorunlu mu?</summary>
@@ -111,7 +119,7 @@
           </details>
           <details>
             <summary>Verilerimi nasıl silerim?</summary>
-            <p>Bir kodu sola kaydırıp Sil’e dokun veya karta basılı tutup Sil’i seç. Bu işlem jetonu Anahtar Zinciri’nden ve cihazdaki kaydı siler. Uygulamayı silmek de yerel kayıtları kaldırır.</p>
+            <p>Bir kodu sola kaydırıp Sil’e dokun veya karta basılı tutup Sil’i seç. Bu işlem jetonu Anahtar Zinciri’nden ve cihazdaki kaydı siler. Bir klasörü silmek kodları silmez. Yedek dosyaları uygulamadan silinmez; seçtiğin klasörden ayrıca silmen gerekir.</p>
           </details>
           <details>
             <summary>Bir hata veya öneri bildirmek istiyorum.</summary>
@@ -124,12 +132,12 @@
         <h2>Frequently asked questions</h2>
         <div class="faq">
           <details>
-            <summary>What is Authenticator?</summary>
-            <p>It is an iOS app that generates TOTP and HOTP codes for two-factor authentication. Codes are generated on your device; no account, sign-in or server is required. Tokens are stored in the device Keychain and app records stay on your device.</p>
+            <summary>What is AuthHub?</summary>
+            <p>AuthHub Authenticator is an iOS app that generates TOTP and HOTP codes for two-factor authentication. Codes are generated on your device; no account, sign-in or server is required. Tokens are stored in the device Keychain and app records stay on your device.</p>
           </details>
           <details>
             <summary>How do I add a new code?</summary>
-            <p>Tap the plus button in the top-right corner. Scan the QR code from the service with the camera or enter the secret manually. The service name and account label are display labels; they do not affect code generation.</p>
+            <p>Tap the plus button in the top-right corner. Scan the QR code with the camera, enter the secret manually, or bulk import from a photo or the clipboard. Bulk import shows a preview first, where you can deselect codes you do not want to add. The service name and account label are display labels; they do not affect code generation.</p>
           </details>
           <details>
             <summary>What is the difference between TOTP and HOTP?</summary>
@@ -153,11 +161,19 @@
           </details>
           <details>
             <summary>Why is the newest code at the top?</summary>
-            <p>The newest code always appears at the top. Use the layout menu in the top bar to choose list, compact list or grid.</p>
+            <p>The newest code always appears at the top. Use the layout menu in the top bar to choose list, compact list or grid; use search, pinning and sorting to organise the list.</p>
           </details>
           <details>
-            <summary>Is there backup or migration to another device?</summary>
-            <p>This version has no export/import. Tokens stay on your device. If you delete the app, local records are removed; you will need to add the codes again from each service’s security settings.</p>
+            <summary>How do folders work?</summary>
+            <p>Folders are only for grouping. In Settings → Folders you can create folders with a colour, assign codes and filter with the folder chips at the top. Deleting a folder does not delete codes; they return to All.</p>
+          </details>
+          <details>
+            <summary>How do I add widgets?</summary>
+            <p>Touch and hold the Home Screen or Lock Screen, then add AuthHub from the widget gallery. Widgets show your codes; if Hide Codes in Widgets is enabled in Settings, only service names are shown.</p>
+          </details>
+          <details>
+            <summary>How do backup and restore work?</summary>
+            <p>You can create and restore encrypted backups with a single master password. In Settings → Backup, automatic backups are written to the folder you choose and the last 5 snapshots are kept. Changing the master password requires the current one. Restoring shows a preview first, where you can deselect codes you do not want. To open a backup on another device, just use the same master password.</p>
           </details>
           <details>
             <summary>Are ads required?</summary>
@@ -165,7 +181,7 @@
           </details>
           <details>
             <summary>How do I delete my data?</summary>
-            <p>Swipe a code to the left and tap Delete, or press and hold a card and choose Delete. This removes the token from the Keychain and the local record. Deleting the app also removes local records.</p>
+            <p>Swipe a code to the left and tap Delete, or press and hold a card and choose Delete. This removes the token from the Keychain and the local record. Deleting a folder does not delete codes. Backup files are not removed by the app; delete them from the folder you chose.</p>
           </details>
           <details>
             <summary>I want to report a bug or suggestion.</summary>

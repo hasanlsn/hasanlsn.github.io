@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kimlik Doğrulayıcı — Gizlilik / Privacy</title>
-  <meta name="description" content="Kimlik Doğrulayıcı uygulaması gizlilik politikası.">
+  <title>AuthHub Kimlik Doğrulayıcı — Gizlilik / Privacy</title>
+  <meta name="description" content="AuthHub Kimlik Doğrulayıcı gizlilik politikası.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,16 +16,16 @@
 
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="index.html" aria-label="Kimlik Doğrulayıcı ana sayfa">
+      <a class="brand" href="index.html" aria-label="AuthHub ana sayfa">
         <img src="assets/icon.png" alt="">
         <span>
-          <span class="brand-wordmark">Kimlik Doğrulayıcı</span>
-          <span class="brand-tagline" data-lang-panel="tr">İki adımlı doğrulama</span>
-          <span class="brand-tagline" data-lang-panel="en" hidden>Two-factor authentication</span>
+          <span class="brand-wordmark">AuthHub</span>
+          <span class="brand-tagline" data-lang-panel="tr">Kimlik Doğrulayıcı</span>
+          <span class="brand-tagline" data-lang-panel="en" hidden>Authenticator</span>
         </span>
       </a>
 
-      <nav class="header-nav" aria-label="Kimlik Doğrulayıcı">
+      <nav class="header-nav" aria-label="AuthHub">
         <a href="index.html" data-lang-panel="tr">Uygulama</a>
         <a href="index.html?lang=en" data-lang-panel="en" hidden>App</a>
         <a href="support.html" data-lang-panel="tr">Destek</a>
@@ -43,12 +43,12 @@
   <main id="main" class="wrap page-main">
     <div class="page-heading">
       <div data-lang-panel="tr">
-        <p class="eyebrow">Kimlik Doğrulayıcı · Gizlilik</p>
+        <p class="eyebrow">AuthHub · Gizlilik</p>
         <h1>Gizlilik politikası</h1>
         <p>Yürürlük tarihi: 21 Kasım 2026</p>
       </div>
       <div data-lang-panel="en" hidden>
-        <p class="eyebrow">Authenticator · Privacy</p>
+        <p class="eyebrow">AuthHub · Privacy</p>
         <h1>Privacy policy</h1>
         <p>Effective date: November 21, 2026</p>
       </div>
@@ -56,30 +56,35 @@
 
     <section class="prose">
       <div data-lang-panel="tr">
-        <p>Bu gizlilik politikası, <strong>Kimlik Doğrulayıcı</strong> iOS uygulaması için geçerlidir. Uygulama, hesap oluşturmadan kullanılacak şekilde tasarlanmıştır.</p>
+        <p>Bu gizlilik politikası, <strong>AuthHub Kimlik Doğrulayıcı</strong> iOS uygulaması için geçerlidir. Uygulama, hesap oluşturmadan kullanılacak şekilde tasarlanmıştır.</p>
 
         <h2>Özet</h2>
         <ul>
           <li>Hesap, giriş veya abonelik gerekmez.</li>
           <li>Jetonlar cihazının Anahtar Zinciri’nde, uygulama kayıtları cihazında saklanır.</li>
           <li>Gizli anahtarlar ve kodlar bir sunucuya gönderilmez.</li>
+          <li>Yedekler yalnızca senin seçtiğin klasöre şifreli olarak yazılır.</li>
           <li>Kamera yalnızca QR kod taramak için kullanılır; görüntü kaydedilmez.</li>
           <li>Face ID / Touch ID doğrulaması iOS tarafından yapılır; biyometrik verin uygulamaya verilmez.</li>
           <li>Ana ekranın altında Google Mobile Ads tarafından sağlanan banner reklam gösterilir.</li>
         </ul>
 
         <h2>Cihazında saklanan veriler</h2>
-        <p>Hizmet adı, kullanıcı etiketi, kod üretim yöntemi (TOTP/HOTP), kod geçerlilik süresi, sayaç başlangıç değeri ve Anahtar Zinciri jeton referansı cihazındaki uygulama alanında saklanır. Gizli anahtarlar ve jetonlar iOS Anahtar Zinciri’nde tutulur.</p>
-        <p>Bu veriler bizim tarafımızdan bir sunucuya gönderilmez; uygulama hesap açmaz ve bulut senkronizasyonu kullanmaz.</p>
+        <p>Hizmet adı, kullanıcı etiketi, kod üretim yöntemi (TOTP/HOTP), kod geçerlilik süresi, sayaç başlangıç değeri, klasör atamaları ve Anahtar Zinciri jeton referansı cihazındaki uygulama alanında saklanır. Gizli anahtarlar ve jetonlar iOS Anahtar Zinciri’nde tutulur.</p>
+        <p>Seçtiğin yedek klasörünün erişim izni (bookmark) ve ana parolayı otomatik deneme seçeneğini açtıysan ana parola da cihazın Anahtar Zinciri’nde saklanır.</p>
+        <p>Bu veriler bizim tarafımızdan bir sunucuya gönderilmez; uygulama hesap açmaz ve bulut senkronizasyonu kullanmaz. iCloud Drive’ı yedek klasörü olarak seçmen durumunda yalnızca şifreli yedek dosyası Apple’ın bulutunda saklanır.</p>
 
         <h2>Toplanmayan veriler</h2>
         <p>Uygulama; adını, e-posta adresini, telefon numaranı, kişilerini, fotoğraflarını veya hassas konumunu toplamaz. Reklamlar dışında üçüncü taraf analiz hizmeti kullanılmaz.</p>
 
         <h2>Kamera</h2>
-        <p>Kamera yalnızca QR koddan doğrulama bağlantısını okumak için açılır. Görüntü cihazda işlenir, kaydedilmez ve bir sunucuya gönderilmez. Kamera iznini iOS Ayarlar → Gizlilik ve Güvenlik → Kamera bölümünden kaldırabilirsin; bu durumda kodları elle girebilirsin.</p>
+        <p>Kamera yalnızca QR koddan doğrulama bağlantısını okumak için açılır. Fotoğraftan içe aktarma yalnızca senin seçtiğin görselle çalışır. Görüntü cihazda işlenir, kaydedilmez ve bir sunucuya gönderilmez. Kamera iznini iOS Ayarlar → Gizlilik ve Güvenlik → Kamera bölümünden kaldırabilirsin; bu durumda kodları elle girebilirsin.</p>
 
         <h2>Face ID / Touch ID</h2>
         <p>Biyometrik kilit açıksa uygulama, iOS LocalAuthentication aracılığıyla Face ID, Touch ID veya cihaz parolasını ister. Biyometrik verin uygulama tarafından okunmaz veya saklanmaz; doğrulama tamamen iOS tarafından yapılır.</p>
+
+        <h2>Yedekler</h2>
+        <p>Yedekler, ana parolandan PBKDF2-HMAC-SHA256 ile türetilen bir anahtarla AES-GCM kullanılarak şifrelenir. Yedek dosyası yalnızca senin seçtiğin klasöre yazılır; bu klasör cihazda veya iCloud Drive’da olabilir. Otomatik yedekte son 5 sürüm tutulur. Ana parolanı kaybetmen durumunda yedeği açamayız; parolayı güvenli bir yerde sakla.</p>
 
         <h2>Reklamlar</h2>
         <p>Ana ekranın altındaki banner reklam zorunludur ve uygulama içinden kapatılamaz. İçerik Google Mobile Ads tarafından sağlanır; Google, cihaz tanımlayıcıları ve reklam etkileşimleri gibi teknik verileri kendi gizlilik politikasına göre işleyebilir. Ayrıntılar için <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a>’na bakabilirsin.</p>
@@ -92,7 +97,7 @@
         <p>Uygulama 13 yaşından küçük çocuklara yönelik değildir. Bilerek çocuklardan kişisel bilgi toplamıyoruz. Ebeveyn veya vasi olarak endişen varsa bizimle iletişime geçebilirsin.</p>
 
         <h2>Verilerin saklanması ve silinmesi</h2>
-        <p>Bir kodu uygulama içinden sildiğinde jeton Anahtar Zinciri’nden ve cihazdaki kayıt silinir. Uygulamayı sildiğinde cihazdaki yerel kayıtlar kaldırılır. Anahtar Zinciri’ndeki jetonların uygulama silindiğinde de cihazda kalabileceğini unutma; kodları kullanmadan önce uygulama içinden silmen en temiz yöntemdir.</p>
+        <p>Bir kodu uygulama içinden sildiğinde jeton Anahtar Zinciri’nden ve cihazdaki kayıt silinir. Uygulamayı sildiğinde cihazdaki yerel kayıtlar kaldırılır; ancak seçtiğin klasördeki şifreli yedek dosyaları silinmez, onları ayrıca silmen gerekir. Anahtar Zinciri’ndeki jetonların uygulama silindiğinde de cihazda kalabileceğini unutma; kodları kullanmadan önce uygulama içinden silmen en temiz yöntemdir.</p>
         <p>Verilerinle ilgili bir talebin için <a href="mailto:hasanalisn@gmail.com">hasanalisn@gmail.com</a> adresine yazabilirsin.</p>
 
         <h2>Değişiklikler</h2>
@@ -103,30 +108,35 @@
       </div>
 
       <div data-lang-panel="en" hidden>
-        <p>This privacy policy applies to the <strong>Authenticator</strong> iOS app. The app is designed to be used without creating an account.</p>
+        <p>This privacy policy applies to the <strong>AuthHub Authenticator</strong> iOS app. The app is designed to be used without creating an account.</p>
 
         <h2>Summary</h2>
         <ul>
           <li>No account, sign-in or subscription is required.</li>
           <li>Tokens are stored in your device’s Keychain and app records stay on your device.</li>
           <li>Secret keys and codes are not sent to a server.</li>
+          <li>Backups are written only to the folder you choose, and always encrypted.</li>
           <li>The camera is used only to scan QR codes; images are not stored.</li>
           <li>Face ID / Touch ID verification is handled by iOS; biometric data is not given to the app.</li>
           <li>A banner ad provided by Google Mobile Ads is shown at the bottom of the home screen.</li>
         </ul>
 
         <h2>Data stored on your device</h2>
-        <p>The service name, account label, code generation method (TOTP/HOTP), validation period, initial counter value and Keychain token reference are stored in the app’s local container on your device. Secret keys and tokens are kept in the iOS Keychain.</p>
-        <p>This data is not sent to a server by us; the app does not create an account and does not use cloud sync.</p>
+        <p>The service name, account label, code generation method (TOTP/HOTP), validation period, initial counter value, folder assignments and Keychain token reference are stored in the app’s local container on your device. Secret keys and tokens are kept in the iOS Keychain.</p>
+        <p>If you choose a backup folder, its access bookmark is stored on your device. If you enable automatic master-password retry, the master password is stored in the device Keychain as well.</p>
+        <p>This data is not sent to a server by us; the app does not create an account and does not use cloud sync. If you choose iCloud Drive as the backup folder, only the encrypted backup file is stored in Apple’s cloud.</p>
 
         <h2>Data we do not collect</h2>
         <p>The app does not collect your name, email address, phone number, contacts, photos or precise location. No third-party analytics service is used apart from ads.</p>
 
         <h2>Camera</h2>
-        <p>The camera opens only to read the verification link from a QR code. The image is processed on the device, is not stored and is not sent to a server. You can revoke camera access in iOS Settings → Privacy &amp; Security → Camera; you can still enter codes manually.</p>
+        <p>The camera opens only to read the verification link from a QR code. Importing from a photo only uses the image you choose. The image is processed on the device, is not stored and is not sent to a server. You can revoke camera access in iOS Settings → Privacy &amp; Security → Camera; you can still enter codes manually.</p>
 
         <h2>Face ID / Touch ID</h2>
         <p>If the biometric lock is enabled, the app asks for Face ID, Touch ID or the device passcode through iOS LocalAuthentication. Your biometric data is never read or stored by the app; verification is performed entirely by iOS.</p>
+
+        <h2>Backups</h2>
+        <p>Backups are encrypted with AES-GCM using a key derived from your master password with PBKDF2-HMAC-SHA256. A backup file is written only to the folder you choose; that folder can be on your device or in iCloud Drive. Automatic backup keeps the last 5 snapshots. If you lose your master password, the backup cannot be opened; keep the password somewhere safe.</p>
 
         <h2>Ads</h2>
         <p>The banner ad at the bottom of the home screen is required and cannot be turned off inside the app. Content is provided by Google Mobile Ads; Google may process technical data such as device identifiers and ad interactions under its own privacy policy. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google’s Privacy Policy</a> for details.</p>
@@ -139,7 +149,7 @@
         <p>The app is not directed to children under 13. We do not knowingly collect personal information from children. If you are a parent or guardian with a concern, please contact us.</p>
 
         <h2>Data retention and deletion</h2>
-        <p>When you delete a code inside the app, the token is removed from the Keychain and the local record is deleted. Deleting the app removes local records from your device. Keep in mind that Keychain tokens may remain on the device after the app is deleted; deleting codes inside the app first is the cleanest approach.</p>
+        <p>When you delete a code inside the app, the token is removed from the Keychain and the local record is deleted. Deleting the app removes local records from your device; however, encrypted backup files in the folder you chose are not deleted, so remove them separately. Keep in mind that Keychain tokens may remain on the device after the app is deleted; deleting codes inside the app first is the cleanest approach.</p>
         <p>For a data-related request, email <a href="mailto:hasanalisn@gmail.com">hasanalisn@gmail.com</a>.</p>
 
         <h2>Changes</h2>
