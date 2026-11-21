@@ -246,16 +246,27 @@ a:hover { color: var(--accent); }
   height: 100%;
 }
 
+.hero-icon {
+  width: clamp(120px, 14vw, 170px);
+}
+
 .hero-icon-ritim {
-  left: 4%;
-  top: 6%;
-  transform: rotate(-6deg);
+  left: 0;
+  top: 2%;
+  transform: rotate(-8deg);
+}
+
+.hero-icon-authhub {
+  left: 50%;
+  top: 24%;
+  transform: translateX(-50%) rotate(1deg);
+  z-index: 3;
 }
 
 .hero-icon-qleair {
-  right: 6%;
-  bottom: 2%;
-  transform: rotate(5deg);
+  right: 0;
+  bottom: 0;
+  transform: rotate(8deg);
 }
 
 /* Buttons */

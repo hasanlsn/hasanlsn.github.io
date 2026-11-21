@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kimlik Doğrulayıcı — İki Adımlı Doğrulama</title>
+  <meta name="description" content="Kimlik Doğrulayıcı, TOTP ve HOTP kodlarını cihazında üretir. QR kodla ekle, kodu tek dokunuşla kopyala, Face ID veya Touch ID ile koru. Hesap yok, sunucu yok.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kimlik Doğrulayıcı — İki Adımlı Doğrulama">
+  <meta property="og:description" content="TOTP ve HOTP kodları cihazında. QR kod, biyometrik kilit, kod maskeleme ve üç farklı görünüm.">
+  <meta property="og:image" content="https://hasanlsn.github.io/apps/authhub/assets/og-image.png">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/page.css?v=20261121">
+</head>
+<body>
+  <a class="skip-link" href="#main">İçeriğe geç / Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Kimlik Doğrulayıcı ana sayfa">
+        <img src="assets/icon.png" alt="">
+        <span>
+          <span class="brand-wordmark">Kimlik Doğrulayıcı</span>
+          <span class="brand-tagline" data-lang-panel="tr">İki adımlı doğrulama</span>
+          <span class="brand-tagline" data-lang-panel="en" hidden>Two-factor authentication</span>
+        </span>
+      </a>
+
+      <nav class="header-nav" aria-label="Kimlik Doğrulayıcı">
+        <a href="index.html#features" data-lang-panel="tr">Özellikler</a>
+        <a href="index.html?lang=en#features" data-lang-panel="en" hidden>Features</a>
+        <a href="support.html" data-lang-panel="tr">Destek</a>
+        <a href="support.html?lang=en" data-lang-panel="en" hidden>Support</a>
+        <a href="privacy.html" data-lang-panel="tr">Gizlilik</a>
+        <a href="privacy.html?lang=en" data-lang-panel="en" hidden>Privacy</a>
+        <div class="lang-switch" role="group" aria-label="Dil / Language">
+          <button type="button" data-set-lang="tr" class="active">TR</button>
+          <button type="button" data-set-lang="en">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy" data-lang-panel="tr">
+          <p class="eyebrow">iOS · Güvenlik</p>
+          <h1>Kimlik Doğrulayıcı</h1>
+          <p class="hero-subtitle">
+            TOTP ve HOTP kodlarını cihazında üretir. QR kodla ekle, kodu tek dokunuşla kopyala,
+            Face ID veya Touch ID ile koru. Hesap açmadan kullan.
+          </p>
+          <p class="hero-tagline">Kodların cihazında kalsın.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://apps.apple.com/app/id1481282505" target="_blank" rel="noopener">App Store’da aç ↗</a>
+            <a class="button button-ghost" href="support.html">Destek</a>
+            <a class="button button-ghost" href="privacy.html">Gizlilik</a>
+          </div>
+        </div>
+        <div class="hero-copy" data-lang-panel="en" hidden>
+          <p class="eyebrow">iOS · Security</p>
+          <h1>Authenticator</h1>
+          <p class="hero-subtitle">
+            Generates TOTP and HOTP codes on your device. Add with a QR code, copy with one tap,
+            protect with Face ID or Touch ID. No account needed.
+          </p>
+          <p class="hero-tagline">Your codes stay on your device.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://apps.apple.com/app/id1481282505" target="_blank" rel="noopener">Open in App Store ↗</a>
+            <a class="button button-ghost" href="support.html?lang=en">Support</a>
+            <a class="button button-ghost" href="privacy.html?lang=en">Privacy</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="phone"><img src="assets/shot-list.png" alt=""></div>
+          <div class="phone"><img src="assets/shot-grid.png" alt=""></div>
+          <div class="phone"><img src="assets/shot-compact.png" alt=""></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head" data-lang-panel="tr">
+          <h2>İki adımlı doğrulama, tek yerde</h2>
+          <p>Hizmetlerin verdiği gizli anahtarı ekle; kod üretimi cihazında kalsın.</p>
+        </div>
+        <div class="section-head" data-lang-panel="en" hidden>
+          <h2>Two-factor authentication in one place</h2>
+          <p>Add the secret from your service; code generation stays on your device.</p>
+        </div>
+
+        <div class="feature-grid" data-lang-panel="tr">
+          <article class="feature-card"><div class="feature-dot"></div><h3>TOTP ve HOTP</h3><p>Zaman tabanlı ve sayaç tabanlı kodlar. SHA1, SHA256, SHA512; 6 veya 8 hane.</p></article>
+          <article class="feature-card"><div class="feature-dot"></div><h3>QR kodla ekleme</h3><p>Kamerayla tara veya gizli anahtarı elle gir. Hizmet adı ve kullanıcı bilgisi sana kalsın.</p></article>
+          <article class="feature-card"><div class="feature-dot"></div><h3>Biyometrik kilit</h3><p>Face ID, Touch ID veya cihaz parolasıyla aç. Uygulama arka plana geçince kilitlenir.</p></article>
+          <article class="feature-card"><div class="feature-dot"></div><h3>Kod maskeleme</h3><p>Kodları gizle; ekran görüntüsü veya omuz üstü bakışta görünmesin. Dokununca kopyala.</p></article>
+          <article class="feature-card"><div class="feature-dot"></div><h3>Üç görünüm</h3><p>Liste, kompakt liste veya ızgara. Son eklenen kod her zaman en üstte.</p></article>
+          <article class="feature-card"><div class="feature-dot"></div><h3>Cihazda kalır</h3><p>Jetonlar Anahtar Zinciri’nde, kayıtlar cihazında. Hesap, sunucu veya bulut yok.</p></article>
+        </div>
+
+        <div class="feature-grid" data-lang-panel="en" hidden>
+          <article class="feature-card"><div class="feature-dot"></div><h3>TOTP and HOTP</h3><p>Time-based and counter-based codes. SHA1, SHA256, SHA512; 6 or 8 digits.</p></article>
+          <article class="feature-card"><div class="feature-dot"></div><h3>Add with QR</h3><p>Scan with the camera or enter the secret manually. The service and account labels stay yours.</p></article>
+          <article class="feature-card"><div class="feature-dot"></div><h3>Biometric lock</h3><p>Unlock with Face ID, Touch ID or the device passcode. The app locks when it goes to the background.</p></article>
+          <article class="feature-card"><div class="feature-dot"></div><h3>Code masking</h3><p>Hide codes so they are not exposed in screenshots or over your shoulder. Tap to copy.</p></article>
+          <article class="feature-card"><div class="feature-dot"></div><h3>Three layouts</h3><p>List, compact list or grid. The newest code is always at the top.</p></article>
+          <article class="feature-card"><div class="feature-dot"></div><h3>Stays on device</h3><p>Tokens in the Keychain, records on your device. No account, server or cloud.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head" data-lang-panel="tr">
+          <h2>Göz atmak için üç görünüm</h2>
+          <p>Aynı kodlar; ekranına ve kullanımına göre liste, kompakt liste veya ızgara.</p>
+        </div>
+        <div class="section-head" data-lang-panel="en" hidden>
+          <h2>Three ways to glance</h2>
+          <p>The same codes; list, compact list or grid depending on your screen and habit.</p>
+        </div>
+
+        <div class="screenshot-grid">
+          <figure class="shot-card">
+            <img src="assets/shot-list.png" alt="Liste görünümü">
+            <span data-lang-panel="tr">Liste · büyük kod</span>
+            <span data-lang-panel="en" hidden>List · large code</span>
+          </figure>
+          <figure class="shot-card">
+            <img src="assets/shot-grid.png" alt="Izgara görünümü">
+            <span data-lang-panel="tr">Izgara · iki sütun</span>
+            <span data-lang-panel="en" hidden>Grid · two columns</span>
+          </figure>
+          <figure class="shot-card">
+            <img src="assets/shot-compact.png" alt="Kompakt liste görünümü">
+            <span data-lang-panel="tr">Kompakt · tek satır</span>
+            <span data-lang-panel="en" hidden>Compact · one line</span>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head" data-lang-panel="tr">
+          <h2>Gizlilik önce gelir</h2>
+          <p>Jetonlar cihazının Anahtar Zinciri’nde tutulur. Gizli anahtarlar hiçbir sunucuya gönderilmez.</p>
+        </div>
+        <div class="section-head" data-lang-panel="en" hidden>
+          <h2>Privacy first</h2>
+          <p>Tokens are kept in your device’s Keychain. Secret keys are never sent to a server.</p>
+        </div>
+
+        <div class="note-card" data-lang-panel="tr">
+          <p><strong>Reklamlar hakkında:</strong> Ana ekranın altında banner reklam gösterilir ve reklamlar kapatılamaz. Yalnızca takip iznini iOS <em>Ayarlar → Gizlilik ve Güvenlik → İzleme</em> bölümünden değiştirebilirsin. İzin vermezsen kişiselleştirilmemiş reklam gösterilir.</p>
+        </div>
+        <div class="note-card" data-lang-panel="en" hidden>
+          <p><strong>About ads:</strong> A banner ad is shown at the bottom of the home screen and cannot be turned off. You can only change the tracking permission in iOS <em>Settings → Privacy &amp; Security → Tracking</em>. If you decline, non-personalized ads are shown.</p>
+        </div>
+
+        <div class="note-card">
+          <p data-lang-panel="tr"><strong>Bir sorun veya öneri mi var?</strong> Destek sayfasında sık sorulan sorular ve iletişim bilgisi var.</p>
+          <p data-lang-panel="en" hidden><strong>Found a problem or have a suggestion?</strong> The support page has common questions and contact details.</p>
+          <a class="button button-primary" href="support.html" data-lang-panel="tr">Desteğe git</a>
+          <a class="button button-primary" href="support.html?lang=en" data-lang-panel="en" hidden>Go to support</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© 2026 Hasan Ali Asan</span>
+      <div class="footer-links">
+        <a href="../../index.html">Hasan Ali Asan</a>
+        <a href="index.html" data-lang-panel="tr">Uygulama</a>
+        <a href="index.html?lang=en" data-lang-panel="en" hidden>App</a>
+        <a href="support.html" data-lang-panel="tr">Destek</a>
+        <a href="support.html?lang=en" data-lang-panel="en" hidden>Support</a>
+        <a href="privacy.html" data-lang-panel="tr">Gizlilik</a>
+        <a href="privacy.html?lang=en" data-lang-panel="en" hidden>Privacy</a>
+        <a href="mailto:hasanalisn@gmail.com">hasanalisn@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var queryLang = params.get("lang");
+      var browserLang = (navigator.language || "en").toLowerCase();
+      var lang = queryLang === "tr" || queryLang === "en"
+        ? queryLang
+        : (browserLang.indexOf("tr") === 0 ? "tr" : "en");
+      var panels = document.querySelectorAll("[data-lang-panel]");
+      var buttons = document.querySelectorAll("[data-set-lang]");
+
+      function setLang(next) {
+        lang = next;
+        document.documentElement.lang = next;
+        panels.forEach(function (panel) {
+          panel.hidden = panel.getAttribute("data-lang-panel") !== next;
+        });
+        buttons.forEach(function (button) {
+          button.classList.toggle("active", button.getAttribute("data-set-lang") === next);
+        });
+      }
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          var next = button.getAttribute("data-set-lang");
+          setLang(next);
+          var url = new URL(window.location.href);
+          url.searchParams.set("lang", next);
+          history.replaceState(null, "", url.toString());
+        });
+      });
+
+      setLang(lang);
+    })();
+  </script>
+</body>
+</html>

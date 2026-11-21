@@ -21,6 +21,7 @@ Mevcut uygulamalar:
 
 - `ritim/` — https://hasanlsn.github.io/apps/ritim/
 - `qleair/` — https://hasanlsn.github.io/apps/qleair/
+- `authhub/` — https://hasanlsn.github.io/apps/authhub/
 
 Yeni bir uygulama eklerken aynı üç sayfayı ve `assets/page.css` bağlantısını
 kullanabilirsiniz. Sayfaların birbirine göreli bağlantıları `index.html`,

@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kimlik Doğrulayıcı — Destek / Support</title>
+  <meta name="description" content="Kimlik Doğrulayıcı uygulaması için destek, sık sorulan sorular ve iletişim bilgileri.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/page.css?v=20261121">
+</head>
+<body>
+  <a class="skip-link" href="#main">İçeriğe geç / Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Kimlik Doğrulayıcı ana sayfa">
+        <img src="assets/icon.png" alt="">
+        <span>
+          <span class="brand-wordmark">Kimlik Doğrulayıcı</span>
+          <span class="brand-tagline" data-lang-panel="tr">İki adımlı doğrulama</span>
+          <span class="brand-tagline" data-lang-panel="en" hidden>Two-factor authentication</span>
+        </span>
+      </a>
+
+      <nav class="header-nav" aria-label="Kimlik Doğrulayıcı">
+        <a href="index.html" data-lang-panel="tr">Uygulama</a>
+        <a href="index.html?lang=en" data-lang-panel="en" hidden>App</a>
+        <a href="support.html" data-lang-panel="tr">Destek</a>
+        <a href="support.html?lang=en" data-lang-panel="en" hidden>Support</a>
+        <a href="privacy.html" data-lang-panel="tr">Gizlilik</a>
+        <a href="privacy.html?lang=en" data-lang-panel="en" hidden>Privacy</a>
+        <div class="lang-switch" role="group" aria-label="Dil / Language">
+          <button type="button" data-set-lang="tr" class="active">TR</button>
+          <button type="button" data-set-lang="en">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap page-main">
+    <div class="page-heading">
+      <div data-lang-panel="tr">
+        <p class="eyebrow">Kimlik Doğrulayıcı · Destek</p>
+        <h1>Yardıma hazırız.</h1>
+        <p>Kod ekleme, biyometrik kilit, reklamlar veya veriler hakkında bir sorunuz mu var? Aşağıdaki yanıtlar çoğu durumu çözer; olmazsa yazabilirsiniz.</p>
+      </div>
+      <div data-lang-panel="en" hidden>
+        <p class="eyebrow">Authenticator · Support</p>
+        <h1>We are here to help.</h1>
+        <p>Do you have a question about adding codes, the biometric lock, ads or your data? The answers below cover most cases; if not, write to us.</p>
+      </div>
+    </div>
+
+    <section class="prose">
+      <div class="contact-card" data-lang-panel="tr">
+        <strong>Bize ulaşın</strong>
+        <p>Genellikle 2 iş günü içinde yanıt veriyoruz.</p>
+        <a href="mailto:hasanalisn@gmail.com">hasanalisn@gmail.com</a>
+      </div>
+      <div class="contact-card" data-lang-panel="en" hidden>
+        <strong>Contact us</strong>
+        <p>We usually reply within 2 business days.</p>
+        <a href="mailto:hasanalisn@gmail.com">hasanalisn@gmail.com</a>
+      </div>
+
+      <div data-lang-panel="tr">
+        <h2>Sık sorulan sorular</h2>
+        <div class="faq">
+          <details>
+            <summary>Kimlik Doğrulayıcı nedir?</summary>
+            <p>İki adımlı doğrulama için TOTP ve HOTP kodları üreten bir iOS uygulamasıdır. Kodlar cihazında üretilir; hesap, giriş veya sunucu gerekmez. Jetonlar cihazın Anahtar Zinciri’nde, uygulama kayıtları cihazında saklanır.</p>
+          </details>
+          <details>
+            <summary>Yeni kod nasıl eklerim?</summary>
+            <p>Sağ üstteki artı düğmesine dokun. Hizmetin verdiği QR kodu kamerayla tarayabilir veya gizli anahtarı elle girebilirsin. Hizmet adı ve kullanıcı bilgisi yalnızca görünen etiketlerdir; kod üretimini etkilemez.</p>
+          </details>
+          <details>
+            <summary>TOTP ile HOTP arasındaki fark nedir?</summary>
+            <p>TOTP zamana bağlıdır ve genellikle 30 saniyede bir yenilenir. HOTP sayaç tabanlıdır; her kod kullanımından sonra sunucuyla birlikte artar. Hizmetin sana hangi yöntemi verdiyse onu seç. HOTP kodunda “Yenile” düğmesiyle sıradaki kodu üretebilirsin.</p>
+          </details>
+          <details>
+            <summary>Kodum hizmetteki kodla eşleşmiyor.</summary>
+            <p>Cihazın tarih ve saatinin otomatik olduğundan emin ol. Gizli anahtarın doğru kopyalandığını, kod hanesinin (6/8), algoritmanın (SHA1/SHA256/SHA512) ve TOTP süresinin hizmetle aynı olduğunu kontrol et. HOTP kullanıyorsan sayaç değerinin eşleşmesi gerekir.</p>
+          </details>
+          <details>
+            <summary>İnternet veya hesap gerekiyor mu?</summary>
+            <p>Hayır. Kod üretimi tamamen cihazında çalışır; hesap açman veya giriş yapman gerekmez. Yalnızca reklamlar ve QR kod taraması için kameraya erişim gerekir.</p>
+          </details>
+          <details>
+            <summary>Biyometrik kilidi nasıl açar veya kapatırım?</summary>
+            <p>Ayarlar → Biyometrik Korumayı Etkinleştir. Açtığında uygulama Face ID, Touch ID veya cihaz parolasıyla açılır; arka plana geçince yeniden kilitlenir. Cihazında ekran kilidi yoksa bu seçenek gizlenir.</p>
+          </details>
+          <details>
+            <summary>Kodlarımı nasıl gizlerim?</summary>
+            <p>Ayarlar → Kodları Gizle. Kodlar maskelenir; dokunduğunda gerçek kod panoya kopyalanır. Bu ayar reklamları etkilemez.</p>
+          </details>
+          <details>
+            <summary>Yeni eklenen kod neden en üstte?</summary>
+            <p>Son eklenen kod her zaman en üstte görünür. Üst çubuktaki görünüm menüsünden liste, kompakt liste veya ızgara seçebilirsin.</p>
+          </details>
+          <details>
+            <summary>Yedekleme veya başka cihaza aktarma var mı?</summary>
+            <p>Bu sürümde dışa/içe aktarma yoktur. Jetonlar cihazda kalır. Uygulamayı silersen yerel kayıtlar kaldırılır; kodları hizmetlerin güvenlik ayarlarından yeniden eklemen gerekir.</p>
+          </details>
+          <details>
+            <summary>Reklamlar zorunlu mu?</summary>
+            <p>Evet. Ana ekranın altındaki banner reklam her zaman gösterilir ve uygulama içinden kapatılamaz. Yalnızca takip iznini iOS Ayarlar → Gizlilik ve Güvenlik → İzleme bölümünden değiştirebilirsin. İzin vermezsen kişiselleştirilmemiş reklam gösterilir.</p>
+          </details>
+          <details>
+            <summary>Verilerimi nasıl silerim?</summary>
+            <p>Bir kodu sola kaydırıp Sil’e dokun veya karta basılı tutup Sil’i seç. Bu işlem jetonu Anahtar Zinciri’nden ve cihazdaki kaydı siler. Uygulamayı silmek de yerel kayıtları kaldırır.</p>
+          </details>
+          <details>
+            <summary>Bir hata veya öneri bildirmek istiyorum.</summary>
+            <p>Cihaz modelini, iOS sürümünü ve sorunu kısaca yazarak <a href="mailto:hasanalisn@gmail.com">hasanalisn@gmail.com</a> adresine e-posta gönder.</p>
+          </details>
+        </div>
+      </div>
+
+      <div data-lang-panel="en" hidden>
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+          <details>
+            <summary>What is Authenticator?</summary>
+            <p>It is an iOS app that generates TOTP and HOTP codes for two-factor authentication. Codes are generated on your device; no account, sign-in or server is required. Tokens are stored in the device Keychain and app records stay on your device.</p>
+          </details>
+          <details>
+            <summary>How do I add a new code?</summary>
+            <p>Tap the plus button in the top-right corner. Scan the QR code from the service with the camera or enter the secret manually. The service name and account label are display labels; they do not affect code generation.</p>
+          </details>
+          <details>
+            <summary>What is the difference between TOTP and HOTP?</summary>
+            <p>TOTP is time-based and usually refreshes every 30 seconds. HOTP is counter-based; the counter advances with the server after each use. Choose the method your service gives you. For HOTP, use the “Refresh” button to generate the next code.</p>
+          </details>
+          <details>
+            <summary>My code does not match the service.</summary>
+            <p>Make sure your device date and time are automatic. Check that the secret was copied correctly and that the digits (6/8), algorithm (SHA1/SHA256/SHA512) and TOTP period match the service. For HOTP, the counter value must match as well.</p>
+          </details>
+          <details>
+            <summary>Do I need internet or an account?</summary>
+            <p>No. Code generation runs entirely on your device; you do not need an account or sign-in. Camera access is only needed for QR scanning; ads may need internet.</p>
+          </details>
+          <details>
+            <summary>How do I turn the biometric lock on or off?</summary>
+            <p>Settings → Enable Biometric Protection. When enabled, the app opens with Face ID, Touch ID or the device passcode and locks again when it goes to the background. If your device has no passcode, this option is hidden.</p>
+          </details>
+          <details>
+            <summary>How do I hide my codes?</summary>
+            <p>Settings → Hide Codes. Codes are masked; tapping copies the real code to the clipboard. This setting does not affect ads.</p>
+          </details>
+          <details>
+            <summary>Why is the newest code at the top?</summary>
+            <p>The newest code always appears at the top. Use the layout menu in the top bar to choose list, compact list or grid.</p>
+          </details>
+          <details>
+            <summary>Is there backup or migration to another device?</summary>
+            <p>This version has no export/import. Tokens stay on your device. If you delete the app, local records are removed; you will need to add the codes again from each service’s security settings.</p>
+          </details>
+          <details>
+            <summary>Are ads required?</summary>
+            <p>Yes. The banner ad at the bottom of the home screen is always shown and cannot be turned off inside the app. You can only change the tracking permission in iOS Settings → Privacy &amp; Security → Tracking. If you decline, non-personalized ads are shown.</p>
+          </details>
+          <details>
+            <summary>How do I delete my data?</summary>
+            <p>Swipe a code to the left and tap Delete, or press and hold a card and choose Delete. This removes the token from the Keychain and the local record. Deleting the app also removes local records.</p>
+          </details>
+          <details>
+            <summary>I want to report a bug or suggestion.</summary>
+            <p>Email <a href="mailto:hasanalisn@gmail.com">hasanalisn@gmail.com</a> with your device model, iOS version and a short description of the issue.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© 2026 Hasan Ali Asan</span>
+      <div class="footer-links">
+        <a href="../../index.html">Hasan Ali Asan</a>
+        <a href="index.html" data-lang-panel="tr">Uygulama</a>
+        <a href="index.html?lang=en" data-lang-panel="en" hidden>App</a>
+        <a href="privacy.html" data-lang-panel="tr">Gizlilik</a>
+        <a href="privacy.html?lang=en" data-lang-panel="en" hidden>Privacy</a>
+        <a href="mailto:hasanalisn@gmail.com">hasanalisn@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var queryLang = params.get("lang");
+      var browserLang = (navigator.language || "en").toLowerCase();
+      var lang = queryLang === "tr" || queryLang === "en"
+        ? queryLang
+        : (browserLang.indexOf("tr") === 0 ? "tr" : "en");
+      var panels = document.querySelectorAll("[data-lang-panel]");
+      var buttons = document.querySelectorAll("[data-set-lang]");
+
+      function setLang(next) {
+        lang = next;
+        document.documentElement.lang = next;
+        panels.forEach(function (panel) {
+          panel.hidden = panel.getAttribute("data-lang-panel") !== next;
+        });
+        buttons.forEach(function (button) {
+          button.classList.toggle("active", button.getAttribute("data-set-lang") === next);
+        });
+      }
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          var next = button.getAttribute("data-set-lang");
+          setLang(next);
+          var url = new URL(window.location.href);
+          url.searchParams.set("lang", next);
+          history.replaceState(null, "", url.toString());
+        });
+      });
+
+      setLang(lang);
+    })();
+  </script>
+</body>
+</html>
