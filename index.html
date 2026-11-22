@@ -265,32 +265,55 @@
       position: relative;
       display: grid;
       place-items: center;
-      isolation: isolate;
     }
 
-    .hero-art::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: clamp(256px, 31vw, 350px);
-      aspect-ratio: 1;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      background: radial-gradient(circle at 50% 42%, #ffd7cb 0%, #ffe9e2 55%, rgba(255, 255, 255, 0) 72%);
-      z-index: -1;
+    .portrait-wrap {
+      position: relative;
+      width: clamp(230px, 29vw, 330px);
     }
 
-    .portrait {
-      width: clamp(210px, 26vw, 290px);
-      height: auto;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      object-position: center 20%;
-      border-radius: 50%;
+    .portrait-frame {
+      border-radius: 2rem;
+      overflow: hidden;
       border: 6px solid #ffffff;
-      background: #0f172a;
-      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.14);
+      outline: 1px solid var(--line);
+      background: var(--accent-soft);
+      box-shadow: 0 24px 50px rgba(15, 23, 42, 0.16);
+    }
+
+    .portrait-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .portrait-badge {
+      position: absolute;
+      bottom: -1.1rem;
+      left: -1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.7rem 0.95rem;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.9rem;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+
+    .portrait-badge svg { color: var(--accent); flex: none; }
+
+    .portrait-badge small {
+      display: block;
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: var(--muted);
     }
 
     /* ---------- Paths ---------- */
@@ -530,7 +553,8 @@
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; }
       .hero-art { order: -1; margin-bottom: 1.4rem; }
-      .portrait { width: min(240px, 58vw); }
+      .portrait-wrap { width: min(290px, 72vw); }
+      .portrait-badge { left: -0.6rem; }
       .paths-grid { grid-template-columns: 1fr; }
       .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .header-nav a { padding: 0.4rem 0.55rem; font-size: 0.85rem; }
@@ -630,7 +654,24 @@
         </div>
 
         <div class="hero-art">
-          <img class="portrait" src="assets/img/profile.jpg" alt="Hasan Ali Asan" width="540" height="540">
+          <div class="portrait-wrap">
+            <div class="portrait-frame">
+              <img src="assets/img/profile.jpg" alt="Hasan Ali Asan" width="750" height="750">
+            </div>
+            <div class="portrait-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="7" y="2" width="10" height="20" rx="2.5"></rect>
+                <line x1="11" y1="18.5" x2="13" y2="18.5"></line>
+              </svg>
+              <div>
+                <span data-lang-panel="tr">iOS Geliştirici</span>
+                <span data-lang-panel="en" hidden>iOS Developer</span>
+                <small data-lang-panel="tr">Kıdemli · İstanbul</small>
+                <small data-lang-panel="en" hidden>Senior · Istanbul</small>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
