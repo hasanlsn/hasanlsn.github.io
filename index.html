@@ -271,52 +271,27 @@
     .hero-art::before {
       content: "";
       position: absolute;
-      inset: 8% 6%;
-      border-radius: 42% 58% 55% 45% / 48% 45% 55% 52%;
-      background: linear-gradient(140deg, #ffd9cf, #ffece5 55%, #eef2ff);
-      filter: blur(2px);
+      top: 50%;
+      left: 50%;
+      width: clamp(256px, 31vw, 350px);
+      aspect-ratio: 1;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: radial-gradient(circle at 50% 42%, #ffd7cb 0%, #ffe9e2 55%, rgba(255, 255, 255, 0) 72%);
       z-index: -1;
     }
 
     .portrait {
-      width: clamp(230px, 30vw, 330px);
-      aspect-ratio: 1 / 1.06;
+      width: clamp(210px, 26vw, 290px);
+      height: auto;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
-      object-position: center top;
-      border-radius: 26px;
-      border: 1px solid var(--line);
+      object-position: center 20%;
+      border-radius: 50%;
+      border: 6px solid #ffffff;
       background: #0f172a;
-      box-shadow: 0 24px 50px rgba(15, 23, 42, 0.18);
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.14);
     }
-
-    .app-chips {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-    }
-
-    .app-chip {
-      position: absolute;
-      display: grid;
-      place-items: center;
-      width: 58px;
-      height: 58px;
-      border-radius: 16px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
-    }
-
-    .app-chip img {
-      width: 44px;
-      height: 44px;
-      border-radius: 11px;
-      display: block;
-    }
-
-    .app-chip-1 { top: 1%; left: -5%; transform: rotate(-8deg); }
-    .app-chip-2 { bottom: 14%; right: -7%; transform: rotate(7deg); }
-    .app-chip-3 { bottom: 0; left: -4%; transform: rotate(-4deg); }
 
     /* ---------- Paths ---------- */
     .paths { padding: 0.5rem 0 3.5rem; }
@@ -461,6 +436,7 @@
 
     .project-mini {
       display: flex;
+      color: var(--ink);
       align-items: center;
       gap: 0.7rem;
       padding: 0.7rem 0.8rem;
@@ -497,7 +473,7 @@
       line-height: 1.25;
     }
 
-    .project-mini-text a {
+    .project-mini-title {
       color: var(--ink);
       font-weight: 600;
       font-size: 0.9rem;
@@ -505,7 +481,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .project-mini-text a:hover { color: var(--accent-dark); }
+    .project-mini:hover .project-mini-title { color: var(--accent-dark); }
 
     .project-mini-text small {
       color: var(--muted);
@@ -517,6 +493,7 @@
 
     .project-mini-store {
       margin-left: auto;
+      transition: transform 0.15s ease;
       flex: none;
       padding: 0.15rem 0.35rem;
       border-radius: 8px;
@@ -524,7 +501,7 @@
       font-family: var(--font-mono);
       font-size: 0.9rem;
     }
-    .project-mini-store:hover { color: var(--accent-dark); background: var(--accent-soft); }
+    .project-mini:hover .project-mini-store { color: var(--accent-dark); transform: translate(1px, -1px); }
 
     /* ---------- Footer ---------- */
     .site-footer {
@@ -553,9 +530,7 @@
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; }
       .hero-art { order: -1; margin-bottom: 1.4rem; }
-      .portrait { width: min(260px, 62vw); }
-      .app-chip { width: 48px; height: 48px; border-radius: 13px; }
-      .app-chip img { width: 37px; height: 37px; border-radius: 9px; }
+      .portrait { width: min(240px, 58vw); }
       .paths-grid { grid-template-columns: 1fr; }
       .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .header-nav a { padding: 0.4rem 0.55rem; font-size: 0.85rem; }
@@ -589,8 +564,8 @@
       </a>
 
       <nav class="header-nav" aria-label="Ana menü">
-        <a href="apps/" data-lang-panel="tr">Uygulamalar</a>
-        <a href="apps/?lang=en" data-lang-panel="en" hidden>Apps</a>
+        <a href="apps/?lang=tr" data-lang-link data-lang-panel="tr">Uygulamalar</a>
+        <a href="apps/?lang=en" data-lang-link data-lang-panel="en" hidden>Apps</a>
         <a href="portfolio/" data-lang-panel="tr">Portfolyo</a>
         <a href="portfolio/" data-lang-panel="en" hidden>Portfolio</a>
         <a class="nav-secondary" href="mailto:hasanalisn@gmail.com" data-lang-panel="tr">İletişim</a>
@@ -629,8 +604,8 @@
           </div>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="apps/" data-lang-panel="tr">Uygulamaları gör</a>
-            <a class="button button-primary" href="apps/?lang=en" data-lang-panel="en" hidden>Browse the apps</a>
+            <a class="button button-primary" href="apps/?lang=tr" data-lang-link data-lang-panel="tr">Uygulamaları gör</a>
+            <a class="button button-primary" href="apps/?lang=en" data-lang-link data-lang-panel="en" hidden>Browse the apps</a>
             <a class="button button-ghost" href="portfolio/" data-lang-panel="tr">Portfolyoyu gör</a>
             <a class="button button-ghost" href="portfolio/" data-lang-panel="en" hidden>View the portfolio</a>
           </div>
@@ -656,11 +631,6 @@
 
         <div class="hero-art">
           <img class="portrait" src="assets/img/profile.jpg" alt="Hasan Ali Asan" width="540" height="540">
-          <div class="app-chips" aria-hidden="true">
-            <span class="app-chip app-chip-1"><img src="apps/ritim/assets/icon.png" alt="" width="44" height="44"></span>
-            <span class="app-chip app-chip-2"><img src="apps/qleair/assets/icon.png" alt="" width="44" height="44"></span>
-            <span class="app-chip app-chip-3"><img src="apps/authhub/assets/icon.png" alt="" width="44" height="44"></span>
-          </div>
         </div>
       </div>
     </section>
@@ -677,7 +647,7 @@
 
           <ul class="app-list">
             <li>
-              <a href="apps/ritim/">
+              <a href="apps/ritim/?lang=tr" data-lang-link>
                 <img src="apps/ritim/assets/icon.png" alt="" width="44" height="44">
                 <span>
                   <strong>ritim</strong>
@@ -687,7 +657,7 @@
               </a>
             </li>
             <li>
-              <a href="apps/qleair/">
+              <a href="apps/qleair/?lang=tr" data-lang-link>
                 <img src="apps/qleair/assets/icon.png" alt="" width="44" height="44">
                 <span>
                   <strong>QLEAIR</strong>
@@ -697,7 +667,7 @@
               </a>
             </li>
             <li>
-              <a href="apps/authhub/">
+              <a href="apps/authhub/?lang=tr" data-lang-link>
                 <img src="apps/authhub/assets/icon.png" alt="" width="44" height="44">
                 <span>
                   <strong data-lang-panel="tr">AuthHub - 2AD Kodları</strong>
@@ -709,8 +679,8 @@
             </li>
           </ul>
 
-          <a class="card-link" href="apps/" data-lang-panel="tr">Tüm uygulamalar <span aria-hidden="true">→</span></a>
-          <a class="card-link" href="apps/?lang=en" data-lang-panel="en" hidden>All apps <span aria-hidden="true">→</span></a>
+          <a class="card-link" href="apps/?lang=tr" data-lang-link data-lang-panel="tr">Tüm uygulamalar <span aria-hidden="true">→</span></a>
+          <a class="card-link" href="apps/?lang=en" data-lang-link data-lang-panel="en" hidden>All apps <span aria-hidden="true">→</span></a>
         </article>
 
         <article class="card">
@@ -750,176 +720,225 @@
         </div>
 
         <ul class="projects-grid">
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">RA</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-rayconnect">RAYConnect</a>
-              <small>Adesso Turkey</small>
-            </span>
-            <a class="project-mini-store" href="https://apps.apple.com/tr/app/id6737743602" target="_blank" rel="noopener" aria-label="RAYConnect — App Store">↗</a>
+          <li>
+            <a class="project-mini" href="https://apps.apple.com/tr/app/id6737743602" target="_blank" rel="noopener" aria-label="RAYConnect — App Store">
+              <span class="project-badge" aria-hidden="true">RA</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">RAYConnect</span>
+                <small>Adesso Turkey</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">↗</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">CA</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-cepteşok-app">CepteŞok App</a>
-              <small>Yıldız Tech</small>
-            </span>
-            <a class="project-mini-store" href="https://apps.apple.com/tr/app/cepte-%C5%9Fok/id1234494259" target="_blank" rel="noopener" aria-label="CepteŞok App — App Store">↗</a>
+          <li>
+            <a class="project-mini" href="https://apps.apple.com/tr/app/cepte-%C5%9Fok/id1234494259" target="_blank" rel="noopener" aria-label="CepteŞok App — App Store">
+              <span class="project-badge" aria-hidden="true">CA</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">CepteŞok App</span>
+                <small>Yıldız Tech</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">↗</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">NK</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-na-kd-app">NA-KD App</a>
-              <small>Kuka Apps</small>
-            </span>
-            <a class="project-mini-store" href="https://apps.apple.com/us/app/na-kd-shop-fashion-online/id1542747496" target="_blank" rel="noopener" aria-label="NA-KD App — App Store">↗</a>
+          <li>
+            <a class="project-mini" href="https://apps.apple.com/us/app/na-kd-shop-fashion-online/id1542747496" target="_blank" rel="noopener" aria-label="NA-KD App — App Store">
+              <span class="project-badge" aria-hidden="true">NK</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">NA-KD App</span>
+                <small>Kuka Apps</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">↗</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">QI</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-quickapp-ios-sdk">QuickApp iOS SDK</a>
-              <small>Huawei</small>
-            </span>
+          <li>
+            <a class="project-mini" href="portfolio/#project-quickapp-ios-sdk" aria-label="QuickApp iOS SDK — portfolyoda gör">
+              <span class="project-badge" aria-hidden="true">QI</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">QuickApp iOS SDK</span>
+                <small>Huawei</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">→</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">MY</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-myhyundaitürkiye">myHyundaiTürkiye</a>
-              <small>Kyros Mobile</small>
-            </span>
-            <a class="project-mini-store" href="https://apps.apple.com/tr/app/myhyundait%C3%BCrkiye/id6464392167?l=tr" target="_blank" rel="noopener" aria-label="myHyundaiTürkiye — App Store">↗</a>
+          <li>
+            <a class="project-mini" href="https://apps.apple.com/tr/app/myhyundait%C3%BCrkiye/id6464392167?l=tr" target="_blank" rel="noopener" aria-label="myHyundaiTürkiye — App Store">
+              <span class="project-badge" aria-hidden="true">MY</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">myHyundaiTürkiye</span>
+                <small>Kyros Mobile</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">↗</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">EB</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-ebebek">ebebek</a>
-              <small>Kyros Mobile</small>
-            </span>
-            <a class="project-mini-store" href="https://apps.apple.com/tr/app/ebebek/id563516181?l=tr" target="_blank" rel="noopener" aria-label="ebebek — App Store">↗</a>
+          <li>
+            <a class="project-mini" href="https://apps.apple.com/tr/app/ebebek/id563516181?l=tr" target="_blank" rel="noopener" aria-label="ebebek — App Store">
+              <span class="project-badge" aria-hidden="true">EB</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">ebebek</span>
+                <small>Kyros Mobile</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">↗</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">KP</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-kampüs-plus-healthfeed">Kampüs Plus HealthFeed</a>
-              <small>Kyros Mobile</small>
-            </span>
-            <a class="project-mini-store" href="https://apps.apple.com/tr/app/kamp%C3%BCs-plus-healthfeed/id1550069987?l=tr" target="_blank" rel="noopener" aria-label="Kampüs Plus HealthFeed — App Store">↗</a>
+          <li>
+            <a class="project-mini" href="https://apps.apple.com/tr/app/kamp%C3%BCs-plus-healthfeed/id1550069987?l=tr" target="_blank" rel="noopener" aria-label="Kampüs Plus HealthFeed — App Store">
+              <span class="project-badge" aria-hidden="true">KP</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">Kampüs Plus HealthFeed</span>
+                <small>Kyros Mobile</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">↗</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">BB</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-bk-basketbol">BK Basketbol</a>
-              <small>Kyros Mobile</small>
-            </span>
+          <li>
+            <a class="project-mini" href="portfolio/#project-bk-basketbol" aria-label="BK Basketbol — portfolyoda gör">
+              <span class="project-badge" aria-hidden="true">BB</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">BK Basketbol</span>
+                <small>Kyros Mobile</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">→</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">MH</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-mutlu-hamileler">Mutlu Hamileler</a>
-              <small>Happy Digital</small>
-            </span>
-            <a class="project-mini-store" href="https://apps.apple.com/tr/app/mutlu-hamileler-mutlu-bebekler/id1141379201" target="_blank" rel="noopener" aria-label="Mutlu Hamileler — App Store">↗</a>
+          <li>
+            <a class="project-mini" href="https://apps.apple.com/tr/app/mutlu-hamileler-mutlu-bebekler/id1141379201" target="_blank" rel="noopener" aria-label="Mutlu Hamileler — App Store">
+              <span class="project-badge" aria-hidden="true">MH</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">Mutlu Hamileler</span>
+                <small>Happy Digital</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">↗</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">MB</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-mutlu-bebekler">Mutlu Bebekler</a>
-              <small>Happy Digital</small>
-            </span>
-            <a class="project-mini-store" href="https://apps.apple.com/tr/app/happy-kids-bebek-geli%C5%9Fimi/id1349245161?l=tr" target="_blank" rel="noopener" aria-label="Mutlu Bebekler — App Store">↗</a>
+          <li>
+            <a class="project-mini" href="https://apps.apple.com/tr/app/happy-kids-bebek-geli%C5%9Fimi/id1349245161?l=tr" target="_blank" rel="noopener" aria-label="Mutlu Bebekler — App Store">
+              <span class="project-badge" aria-hidden="true">MB</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">Mutlu Bebekler</span>
+                <small>Happy Digital</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">↗</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">PE</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-peride">Peride</a>
-              <small>Happy Digital</small>
-            </span>
+          <li>
+            <a class="project-mini" href="portfolio/#project-peride" aria-label="Peride — portfolyoda gör">
+              <span class="project-badge" aria-hidden="true">PE</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">Peride</span>
+                <small>Happy Digital</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">→</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">KO</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-kopilot">Kopilot</a>
-              <small>Kyros Mobile</small>
-            </span>
+          <li>
+            <a class="project-mini" href="portfolio/#project-kopilot" aria-label="Kopilot — portfolyoda gör">
+              <span class="project-badge" aria-hidden="true">KO</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">Kopilot</span>
+                <small>Kyros Mobile</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">→</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">TN</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-turuncu-not">Turuncu Not</a>
-              <small>Individual</small>
-            </span>
+          <li>
+            <a class="project-mini" href="portfolio/#project-turuncu-not" aria-label="Turuncu Not — portfolyoda gör">
+              <span class="project-badge" aria-hidden="true">TN</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">Turuncu Not</span>
+                <small>Individual</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">→</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">WA</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-wallett">Wallett</a>
-              <small>Individual</small>
-            </span>
-            <a class="project-mini-store" href="https://apps.apple.com/tr/app/wallett/id1370082133?l=tr" target="_blank" rel="noopener" aria-label="Wallett — App Store">↗</a>
+          <li>
+            <a class="project-mini" href="https://apps.apple.com/tr/app/wallett/id1370082133?l=tr" target="_blank" rel="noopener" aria-label="Wallett — App Store">
+              <span class="project-badge" aria-hidden="true">WA</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">Wallett</span>
+                <small>Individual</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">↗</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">BR</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-bau-radyo">BAU Radyo</a>
-              <small>Kyros Mobile</small>
-            </span>
-            <a class="project-mini-store" href="https://apps.apple.com/tr/app/id918482022?l=tr" target="_blank" rel="noopener" aria-label="BAU Radyo — App Store">↗</a>
+          <li>
+            <a class="project-mini" href="https://apps.apple.com/tr/app/id918482022?l=tr" target="_blank" rel="noopener" aria-label="BAU Radyo — App Store">
+              <span class="project-badge" aria-hidden="true">BR</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">BAU Radyo</span>
+                <small>Kyros Mobile</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">↗</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">HA</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-havalimanı">HavaLimanı</a>
-              <small>Happy Digital</small>
-            </span>
-            <a class="project-mini-store" href="https://apps.apple.com/tr/app/id790306470?l=tr" target="_blank" rel="noopener" aria-label="HavaLimanı — App Store">↗</a>
+          <li>
+            <a class="project-mini" href="https://apps.apple.com/tr/app/id790306470?l=tr" target="_blank" rel="noopener" aria-label="HavaLimanı — App Store">
+              <span class="project-badge" aria-hidden="true">HA</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">HavaLimanı</span>
+                <small>Happy Digital</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">↗</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">SE</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-seemeet">SeeMeet</a>
-              <small>Kyros Mobile</small>
-            </span>
-            <a class="project-mini-store" href="https://apps.apple.com/tr/app/seemeet/id1509099785?l=tr" target="_blank" rel="noopener" aria-label="SeeMeet — App Store">↗</a>
+          <li>
+            <a class="project-mini" href="https://apps.apple.com/tr/app/seemeet/id1509099785?l=tr" target="_blank" rel="noopener" aria-label="SeeMeet — App Store">
+              <span class="project-badge" aria-hidden="true">SE</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">SeeMeet</span>
+                <small>Kyros Mobile</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">↗</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">SÖ</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-stoys-öğretmen">Stoys Öğretmen</a>
-              <small>Kyros Mobile</small>
-            </span>
-            <a class="project-mini-store" href="https://apps.apple.com/tr/app/id1480840300" target="_blank" rel="noopener" aria-label="Stoys Öğretmen — App Store">↗</a>
+          <li>
+            <a class="project-mini" href="https://apps.apple.com/tr/app/id1480840300" target="_blank" rel="noopener" aria-label="Stoys Öğretmen — App Store">
+              <span class="project-badge" aria-hidden="true">SÖ</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">Stoys Öğretmen</span>
+                <small>Kyros Mobile</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">↗</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">NE</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-nöbetçi-eczaneler-türkiye">Nöbetçi Eczaneler Türkiye</a>
-              <small>Happy Digital</small>
-            </span>
-            <a class="project-mini-store" href="https://apps.apple.com/tr/app/id1445442406?l=tr" target="_blank" rel="noopener" aria-label="Nöbetçi Eczaneler Türkiye — App Store">↗</a>
+          <li>
+            <a class="project-mini" href="https://apps.apple.com/tr/app/id1445442406?l=tr" target="_blank" rel="noopener" aria-label="Nöbetçi Eczaneler Türkiye — App Store">
+              <span class="project-badge" aria-hidden="true">NE</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">Nöbetçi Eczaneler Türkiye</span>
+                <small>Happy Digital</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">↗</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">NS</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-nn-senin-mobilin">NN Senin Mobilin</a>
-              <small>Kyros Mobile</small>
-            </span>
-            <a class="project-mini-store" href="https://apps.apple.com/tr/app/nn-senin-mobilin/id898239714?l=tr" target="_blank" rel="noopener" aria-label="NN Senin Mobilin — App Store">↗</a>
+          <li>
+            <a class="project-mini" href="https://apps.apple.com/tr/app/nn-senin-mobilin/id898239714?l=tr" target="_blank" rel="noopener" aria-label="NN Senin Mobilin — App Store">
+              <span class="project-badge" aria-hidden="true">NS</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">NN Senin Mobilin</span>
+                <small>Kyros Mobile</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">↗</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">SM</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-stoys-mobile">Stoys Mobile</a>
-              <small>Kyros Mobile</small>
-            </span>
-            <a class="project-mini-store" href="https://apps.apple.com/tr/app/stoys-mobile/id1352937665" target="_blank" rel="noopener" aria-label="Stoys Mobile — App Store">↗</a>
+          <li>
+            <a class="project-mini" href="https://apps.apple.com/tr/app/stoys-mobile/id1352937665" target="_blank" rel="noopener" aria-label="Stoys Mobile — App Store">
+              <span class="project-badge" aria-hidden="true">SM</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">Stoys Mobile</span>
+                <small>Kyros Mobile</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">↗</span>
+            </a>
           </li>
-          <li class="project-mini">
-            <span class="project-badge" aria-hidden="true">CE</span>
-            <span class="project-mini-text">
-              <a href="portfolio/#project-ck-enerji">CK Enerji</a>
-              <small>Kyros Mobile</small>
-            </span>
-            <a class="project-mini-store" href="https://apps.apple.com/tr/app/ck-enerji/id1447802850" target="_blank" rel="noopener" aria-label="CK Enerji — App Store">↗</a>
+          <li>
+            <a class="project-mini" href="https://apps.apple.com/tr/app/ck-enerji/id1447802850" target="_blank" rel="noopener" aria-label="CK Enerji — App Store">
+              <span class="project-badge" aria-hidden="true">CE</span>
+              <span class="project-mini-text">
+                <span class="project-mini-title">CK Enerji</span>
+                <small>Kyros Mobile</small>
+              </span>
+              <span class="project-mini-store" aria-hidden="true">↗</span>
+            </a>
           </li>
         </ul>
 
@@ -933,8 +952,8 @@
     <div class="wrap footer-inner">
       <span>© 2026 Hasan Ali Asan</span>
       <div class="footer-links">
-        <a href="apps/" data-lang-panel="tr">Uygulamalar</a>
-        <a href="apps/?lang=en" data-lang-panel="en" hidden>Apps</a>
+        <a href="apps/?lang=tr" data-lang-link data-lang-panel="tr">Uygulamalar</a>
+        <a href="apps/?lang=en" data-lang-link data-lang-panel="en" hidden>Apps</a>
         <a href="portfolio/" data-lang-panel="tr">Portfolyo</a>
         <a href="portfolio/" data-lang-panel="en" hidden>Portfolio</a>
         <a href="mailto:hasanalisn@gmail.com">hasanalisn@gmail.com</a>
@@ -967,6 +986,7 @@
         buttons.forEach(function (button) {
           button.classList.toggle("active", button.getAttribute("data-set-lang") === next);
         });
+        syncInternalLinks();
       }
 
       buttons.forEach(function (button) {
@@ -978,6 +998,14 @@
           history.replaceState(null, "", url.toString());
         });
       });
+
+      function syncInternalLinks() {
+        document.querySelectorAll("[data-lang-link]").forEach(function (link) {
+          var url = new URL(link.getAttribute("href"), window.location.href);
+          url.searchParams.set("lang", lang);
+          link.setAttribute("href", url.pathname + url.search + url.hash);
+        });
+      }
 
       // Proje sayısı portfolyo listesiyle aynı kalsın: ızgara + öne çıkan 3 uygulama.
       var countEl = document.querySelector("[data-app-count]");
