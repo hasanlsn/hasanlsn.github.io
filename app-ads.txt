@@ -126,7 +126,7 @@ openx.com, 565175463, RESELLER, 6a698e2ec38604c6
 openx.com, 559792583, RESELLER, 6a698e2ec38604c6
 pubnative.net, 1009458, RESELLER, d641df8625486a7b
 rubiconproject.com, 17328, RESELLER, 0bfd66d529a55807
-rubiconproject.com, 24400, RESELLER, 0bfd66d529a55807
+rubiconproject.com, 24400, DIRECT, 0bfd66d529a55807
 rubiconproject.com, 17062, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 25336, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 24600, RESELLER, 0bfd66d529a55807
