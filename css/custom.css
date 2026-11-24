@@ -148,25 +148,25 @@ a {
   align-items: center;
 }
 .brand-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 0.7rem;
-  background: var(--accent);
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: var(--ink);
   color: #fff;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1rem;
-  letter-spacing: 0.05em;
-  box-shadow: 0 6px 16px -6px rgba(240, 85, 53, 0.6);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
 .brand-name {
   font-family: var(--font-display);
   font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
   color: var(--ink);
-  margin-left: 0.75rem;
+  margin-left: 0.65rem;
   white-space: nowrap;
 }
 .main-nav .navbar-nav .nav-link {

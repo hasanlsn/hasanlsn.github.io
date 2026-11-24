@@ -47,7 +47,7 @@ a:hover { color: var(--accent); }
 .skip-link:focus { top: 1rem; }
 
 .wrap {
-  width: min(1120px, calc(100% - 40px));
+  width: min(1320px, calc(100% - 40px));
   margin: 0 auto;
 }
 
@@ -474,7 +474,7 @@ a:hover { color: var(--accent); }
 }
 
 @media (max-width: 620px) {
-  .wrap { width: min(100% - 28px, 1120px); }
+  .wrap { width: min(100% - 28px, 1320px); }
   .header-inner { min-height: 66px; gap: 0.6rem; }
   .brand img { width: 36px; height: 36px; border-radius: 10px; }
   .brand-wordmark { font-size: 1.15rem; }
