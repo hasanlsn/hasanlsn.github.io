@@ -1137,3 +1137,105 @@ a {
     transition: none;
   }
 }
+
+/* ---- Dark mode ---- */
+html[data-theme="dark"] {
+  --page: #0f0d18;
+  --surface: #171424;
+  --surface-alt: #14111f;
+  --ink: #f5f3ff;
+  --body: #b6b2c8;
+  --muted: #928da8;
+  --line: #2b2742;
+  --accent: #ff8163;
+  --accent-strong: #ffa48c;
+  --accent-soft: rgba(255, 129, 99, 0.16);
+  --accent-faint: rgba(255, 129, 99, 0.1);
+  --bs-body-bg: #0f0d18;
+  --bs-body-color: #b6b2c8;
+  --bs-emphasis-color: #f5f3ff;
+  --bs-secondary-color: #928da8;
+  --bs-border-color: #2b2742;
+  --bs-link-color: #ff9a7f;
+  --bs-link-hover-color: #ffb59f;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 12px 30px -12px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 24px 60px -24px rgba(0, 0, 0, 0.85);
+}
+
+html[data-theme="dark"] .main-nav {
+  background: rgba(15, 13, 24, 0.85);
+}
+
+html[data-theme="dark"] .main-nav .navbar-nav .nav-link {
+  color: var(--body);
+}
+
+html[data-theme="dark"] .main-nav .navbar-nav .nav-link:hover,
+html[data-theme="dark"] .main-nav .navbar-nav .nav-link.active {
+  color: var(--accent);
+}
+
+html[data-theme="dark"] .hero-float,
+html[data-theme="dark"] .timeline-item::after {
+  background: var(--surface);
+}
+
+html[data-theme="dark"] .hero-img-frame {
+  border-color: var(--surface);
+}
+
+html[data-theme="dark"] .main-nav .theme-toggle {
+  margin-left: 0.75rem;
+}
+
+html[data-theme="dark"] .theme-nav-item {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+/* Dark mode — pills, etiketler, filtreler */
+html[data-theme="dark"] .chip {
+  background: var(--surface-alt);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+html[data-theme="dark"] .chip:hover {
+  border-color: var(--accent);
+}
+
+html[data-theme="dark"] .level-good {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+html[data-theme="dark"] .level-medium {
+  background: rgba(250, 204, 21, 0.16);
+  color: #fcd34d;
+}
+
+html[data-theme="dark"] .level-starter {
+  background: rgba(148, 163, 184, 0.16);
+  color: var(--muted);
+}
+
+html[data-theme="dark"] .tech-tag {
+  background: rgba(148, 163, 184, 0.14);
+  color: var(--body);
+}
+
+html[data-theme="dark"] .social-link {
+  background: var(--surface-alt);
+  color: var(--body);
+}
+
+html[data-theme="dark"] .social-link:hover {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .filter-btn {
+  color: var(--body);
+}

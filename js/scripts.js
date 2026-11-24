@@ -43,8 +43,11 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    // Bootstrap 5.3 ensures a stable light theme is active
-    document.documentElement.setAttribute('data-bs-theme', 'light');
+    // Bootstrap 5.3 renk modu, portfolyo tema seçimini izler
+    document.documentElement.setAttribute(
+        'data-bs-theme',
+        document.documentElement.getAttribute('data-theme') || 'light'
+    );
 
     // Scroll to and highlight a project card from the Experience timeline
     const companyProjectLinks = document.querySelectorAll(
