@@ -4,6 +4,35 @@
   color-scheme: light;
 }
 
+/* ---- Ortak sayfa ızgarası: portfolyo container'ı ile aynı ---- */
+.wrap {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+  padding-inline: 12px;
+}
+
+@media (min-width: 576px) {
+  .wrap { max-width: 540px; }
+}
+@media (min-width: 768px) {
+  .wrap { max-width: 720px; }
+}
+@media (min-width: 992px) {
+  .wrap { max-width: 960px; }
+}
+@media (min-width: 1200px) {
+  .wrap { max-width: 1140px; }
+}
+@media (min-width: 1400px) {
+  .wrap { max-width: 1320px; }
+}
+
+@media (max-width: 460px) {
+  .brand-name { display: none; }
+}
+
 html[data-theme="dark"] {
   color-scheme: dark;
   --ink: #f5f3ff;

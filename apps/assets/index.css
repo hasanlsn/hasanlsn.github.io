@@ -63,7 +63,7 @@ a:hover { color: var(--accent); }
 }
 
 .header-inner {
-  min-height: 74px;
+  min-height: 72px;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -96,6 +96,7 @@ a:hover { color: var(--accent); }
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1rem;
+  line-height: 1.6;
   letter-spacing: -0.02em;
   white-space: nowrap;
 }
@@ -531,9 +532,7 @@ a:hover { color: var(--accent); }
 
 @media (max-width: 620px) {
   .wrap { width: min(100% - 28px, 1320px); }
-  .header-inner { min-height: 66px; gap: 0.6rem; }
-  .brand-mark { width: 36px; height: 36px; border-radius: 10px; }
-  .brand-name { font-size: 0.95rem; }
+  .header-inner { min-height: 72px; gap: 0.6rem; }
   .header-nav { gap: 0; }
   .header-nav a { font-size: 0.76rem; padding-inline: 0.35rem; }
   .header-nav .nav-secondary { display: none; }
