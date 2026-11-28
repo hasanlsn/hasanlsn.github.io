@@ -271,6 +271,13 @@ a:hover { color: var(--accent); }
   z-index: 4;
 }
 
+.hero-icon-nextry {
+  right: 0;
+  top: 2%;
+  transform: rotate(6deg);
+  z-index: 2;
+}
+
 /* Buttons */
 
 .button {
